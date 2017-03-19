@@ -4,8 +4,10 @@ from django import http
 from django.http import StreamingHttpResponse
 import pandas as pd
 from scipy.spatial.distance import cosine
+from django.conf.urls import include, url
+from django.contrib import admin
 
-
+@csrf_exempt
 def POST(request):
     
     received_json_data=json.loads(request.body)
