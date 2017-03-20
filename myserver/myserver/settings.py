@@ -25,7 +25,7 @@ SECRET_KEY = 'ep2abl8&6t1=cga(9ahd746s!@+udsfky0*7d*587(sg#_#2f%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["46.101.31.182"]
 
 
 # Application definition
@@ -45,13 +45,14 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'myserver.urls'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 'None'
 
 TEMPLATES = [
     {

@@ -35,6 +35,7 @@ def POST(request):
     # --- End Item Based Recommendations --- #
     # --- Start User Based Recommendations --- #
     # Helper function to get similarity scores
+    @csrf_exempt
     def getScore(history, similarities):
         return sum(history * similarities) / sum(similarities)
     # Create a place holder matrix for similarities, and fill in the user name
