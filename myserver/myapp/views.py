@@ -5,6 +5,7 @@ import json
 from django import http
 from django.http import StreamingHttpResponse
 import pandas as pd
+import numpy as np
 from scipy.spatial.distance import cosine
 from django.conf.urls import include, url
 from django.contrib import admin
@@ -12,13 +13,29 @@ from django.contrib import admin
 
 def post(request):
     
+    
     received_json_data=json.loads(request.body)
+
     received_json_data = received_json_data['data']
-    received_json_dataframe = pd.DataFrame(received_json_data)
-    print(received_json_dataframe)
+
+
+    df = pd.DataFrame(received_json_data)
+    df = df.fillna(0)
+    df = pd.DataFrame(df).astype(int)
+    
+
+    df = pd.pivot_table(
+        df,values='attending',
+        index=['userId'], #these stay as columns; will fail silently if any of these cols have null values
+        columns=['eventId']) #data values in this column become their own column
+    
+
+    df = df.reset_index()
+    print("Third frame")
+    print(df)
     # --- Start Item Based Recommendations --- #
-    # Drop any column named "user"
-    data_file = data.drop('user', 1)
+    # Drop any column named "userId"
+    data_file = df.drop('userId', 1)
     # Create a placeholder dataframe listing item vs. item
     data_ibs = pd.DataFrame(index=data_file.columns,
                             columns=data_file.columns)
@@ -39,7 +56,7 @@ def post(request):
     # --- End Item Based Recommendations --- #
     # --- Start User Based Recommendations --- #
     # Helper function to get similarity scores
-    @csrf_exempt
+
     def getScore(history, similarities):
         return sum(history * similarities) / sum(similarities)
     # Create a place holder matrix for similarities, and fill in the user name
