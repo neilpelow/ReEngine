@@ -7,11 +7,15 @@ from scipy.spatial.distance import cosine
 from django.conf.urls import include, url
 from django.contrib import admin
 
-@csrf_exempt
+ 
 def POST(request):
     
-    received_json_data=json.loads(request.body)
-    data = pd.read_json(received_json_data)
+    received_json_data = json.loads("/Users/neilpelow/Desktop/ReEngine/myserver/myapp/users.json")
+    received_json_data = received_json_data['data']
+
+
+    received_json_dataframe = pd.DataFrame(received_json_data)
+    print(received_json_dataframe)
     # --- Start Item Based Recommendations --- #
     # Drop any column named "user"
     data_file = data.drop('user', 1)
@@ -35,7 +39,7 @@ def POST(request):
     # --- End Item Based Recommendations --- #
     # --- Start User Based Recommendations --- #
     # Helper function to get similarity scores
-    @csrf_exempt
+
     def getScore(history, similarities):
         return sum(history * similarities) / sum(similarities)
     # Create a place holder matrix for similarities, and fill in the user name

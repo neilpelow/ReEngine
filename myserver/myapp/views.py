@@ -13,7 +13,9 @@ from django.contrib import admin
 def post(request):
     
     received_json_data=json.loads(request.body)
-    data = pd.read_json(received_json_data)
+    received_json_data = received_json_data['data']
+    received_json_dataframe = pd.DataFrame(received_json_data)
+    print(received_json_dataframe)
     # --- Start Item Based Recommendations --- #
     # Drop any column named "user"
     data_file = data.drop('user', 1)
