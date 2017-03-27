@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19edf22d-3a87-4eb7-9a4e-e2fb4146361d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myserver/myapp/r_engine.py" afterPath="$PROJECT_DIR$/myserver/myapp/r_engine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myserver/myapp/users.json" afterPath="$PROJECT_DIR$/myserver/myapp/users.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myserver/myapp/views.py" afterPath="$PROJECT_DIR$/myserver/myapp/views.py" />
     </list>
     <ignored path="ReEngine.iws" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -566,7 +563,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/myserver/myapp/views.py</url>
-          <line>90</line>
+          <line>91</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
       </breakpoints>
@@ -723,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
           <folding />
         </state>
       </provider>

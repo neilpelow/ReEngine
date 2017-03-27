@@ -88,4 +88,5 @@ def post(request):
         data_recommend.iloc[i, 1:] = data_sims.iloc[i, :].order(
             ascending=False).iloc[1:7, ].index.transpose()
     # Return all recommendations in response to HTTP post.
+    print(data_recommend.to_string)
     return data_recommend.to_string
