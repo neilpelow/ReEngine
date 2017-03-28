@@ -4,6 +4,7 @@ from django.shortcuts import render
 import json
 from django import http
 from django.http import StreamingHttpResponse
+from django.http import JsonResponse
 import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cosine
@@ -67,7 +68,9 @@ def post(request):
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
     for i in range(1, len(data_sims.index)):
-        print(i)# up-down
+        print(i)
+        print(" of ")
+        print(len(data_sims.index))# up-down
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
             event = data_sims.columns[j]
@@ -90,8 +93,6 @@ def post(request):
     # Return all recommendations in response to HTTP post
     print("\n")
     print(data_recommend.to_string)
-    if data_recommend is not None:
-        jsonresponse = serializers.serialize('json', data_recommend)
-        struct = json.loads(jsonresponse)
-        data = json.dumps(struct[0])
-        return HttpResponse(data, content_type='json')
+    json_recommend = data_recommend.to_json()
+    if json_recommend is not None:
+        return JsonResponse(json_recommend, content_type='json')

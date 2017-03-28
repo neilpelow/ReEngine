@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19edf22d-3a87-4eb7-9a4e-e2fb4146361d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myserver/myapp/views.py" afterPath="$PROJECT_DIR$/myserver/myapp/views.py" />
     </list>
     <ignored path="ReEngine.iws" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="56" />
+            <state relative-caret-position="549">
+              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -552,7 +551,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/myserver/myapp/views.py</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="160" />
         </line-breakpoint>
       </breakpoints>
@@ -719,8 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="56" />
+        <state relative-caret-position="549">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
           <folding />
         </state>
       </provider>
