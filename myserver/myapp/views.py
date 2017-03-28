@@ -11,6 +11,7 @@ from scipy.spatial.distance import cosine
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.core import serializers
+from sys import stdout
 
 
 def post(request):
@@ -68,9 +69,8 @@ def post(request):
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
     for i in range(1, len(data_sims.index)):
-        print(i)
-        print(" of ")
-        print(len(data_sims.index))# up-down
+        stdout.write("\r%d" % i + " of " + len(data_sims.index))
+        stdout.flush()
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
             event = data_sims.columns[j]
@@ -95,4 +95,4 @@ def post(request):
     print(data_recommend.to_string)
     json_recommend = data_recommend.to_json()
     if json_recommend is not None:
-        return JsonResponse(json_recommend, content_type='json')
+        return JsonResponse(json_recommend, content_type='json', safe=False)
