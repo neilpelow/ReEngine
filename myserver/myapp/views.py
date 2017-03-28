@@ -69,7 +69,7 @@ def post(request):
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
     for i in range(1, len(data_sims.index)):
-        stdout.write("\r%d" + " of " + "\r%d" % i % len(data_sims.index))
+        stdout.write("\r%d" % i)
         stdout.flush()
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
