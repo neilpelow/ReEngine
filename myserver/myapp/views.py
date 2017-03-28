@@ -69,7 +69,7 @@ def post(request):
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
     for i in range(1, len(data_sims.index)):
-        stdout.write("\r%d" % i + " of " + len(data_sims.index))
+        stdout.write("\r%d" % i + " of " + "\r%d" % len(data_sims.index))
         stdout.flush()
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
@@ -83,7 +83,7 @@ def post(request):
                 data_sims.iloc[i][j] = getScore(user_purchases, event_top_sims)
     # Get the top 6 events for each user. Stored in a DateFrame.
     data_recommend = pd.DataFrame(index=data_sims.index, columns=[
-        'userId', '1', '2', '3', '4', '5', '6'
+        'userId', '1', '2', '3', '4', '5', '6's
     ])
     data_recommend.iloc[0:, 0] = data_sims.iloc[:, 0]
     # Instead of top event scores, we want to see eventId numbers.
