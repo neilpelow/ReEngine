@@ -65,7 +65,8 @@ def post(request):
     print(data_sims)
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
-    for i in range(1, len(data_sims.index)):  # up-down
+    for i in range(1, len(data_sims.index)):
+        print(i)# up-down
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
             event = data_sims.columns[j]
@@ -88,4 +89,4 @@ def post(request):
     # Return all recommendations in response to HTTP post
     print("\n")
     print(data_recommend.to_string)
-    return HttpResponse(data_recommend.to_string)
+    return data_recommend.to_string

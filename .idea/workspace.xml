@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19edf22d-3a87-4eb7-9a4e-e2fb4146361d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myserver/myapp/views.py" afterPath="$PROJECT_DIR$/myserver/myapp/views.py" />
     </list>
     <ignored path="ReEngine.iws" />
@@ -16,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ReEngine$views.coverage" NAME="views Coverage Results" MODIFIED="1490640523683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myserver/myapp" />
+    <SUITE FILE_PATH="coverage/ReEngine$views.coverage" NAME="views Coverage Results" MODIFIED="1490708069503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myserver/myapp" />
     <SUITE FILE_PATH="coverage/ReEngine$.coverage" NAME=" Coverage Results" MODIFIED="1490288894409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ReEngine$r_engine.coverage" NAME="r_engine Coverage Results" MODIFIED="1490633317181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myserver/myapp" />
     <SUITE FILE_PATH="coverage/ReEngine$re.coverage" NAME="re Coverage Results" MODIFIED="1490640083057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myserver/myapp" />
@@ -33,21 +34,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="87" column="57" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+            <state relative-caret-position="226">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="re.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myserver/myapp/re.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#30#49#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +110,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,8 +164,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,13 +501,13 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08626198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.086794466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30889422" sideWeight="0.5100143" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25841346" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -563,8 +552,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/myserver/myapp/views.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="157" />
+          <line>19</line>
+          <option name="timeStamp" value="160" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -574,11 +563,19 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="160" />
+      <option name="time" value="161" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -606,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20535">
           <caret line="1422" column="0" selection-start-line="1422" selection-start-column="0" selection-end-line="1422" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -621,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20535">
           <caret line="1422" column="0" selection-start-line="1422" selection-start-column="0" selection-end-line="1422" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1593">
           <caret line="530" column="0" selection-start-line="530" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +689,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103111">
           <caret line="0" column="10459639" selection-start-line="0" selection-start-column="10459639" selection-end-line="0" selection-end-column="10459639" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -710,18 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myserver/myapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="87" column="57" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+        <state relative-caret-position="226">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding />
         </state>
       </provider>
