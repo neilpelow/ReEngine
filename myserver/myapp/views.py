@@ -83,7 +83,7 @@ def post(request):
                 data_sims.iloc[i][j] = getScore(user_purchases, event_top_sims)
     # Get the top 6 events for each user. Stored in a DateFrame.
     data_recommend = pd.DataFrame(index=data_sims.index, columns=[
-        'userId', '1', '2', '3', '4', '5', '6's
+        'userId', '1', '2', '3', '4', '5', '6'
     ])
     data_recommend.iloc[0:, 0] = data_sims.iloc[:, 0]
     # Instead of top event scores, we want to see eventId numbers.
