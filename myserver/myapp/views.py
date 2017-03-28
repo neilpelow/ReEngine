@@ -9,6 +9,7 @@ import numpy as np
 from scipy.spatial.distance import cosine
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.core import serializers
 
 
 def post(request):
@@ -89,4 +90,8 @@ def post(request):
     # Return all recommendations in response to HTTP post
     print("\n")
     print(data_recommend.to_string)
-    return data_recommend.to_string
+    if data_recommend is not None:
+        jsonresponse = serializers.serialize('json', data_recommend)
+        struct = json.loads(jsonresponse)
+        data = json.dumps(struct[0])
+        return HttpResponse(data, content_type='json')
