@@ -93,6 +93,6 @@ def post(request):
     # Return all recommendations in response to HTTP post
     print("\n")
     print(data_recommend.to_string)
-    json_recommend = data_recommend.to_json()
+    json_recommend = data_recommend.to_json(orient='index')
     if json_recommend is not None:
         return JsonResponse(json_recommend, content_type='json', safe=False)
