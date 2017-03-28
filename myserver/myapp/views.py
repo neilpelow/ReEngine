@@ -68,7 +68,6 @@ def post(request):
     for i in range(1, len(data_sims.index)):  # up-down
         for j in range(1, len(data_sims.columns)):  # left-right
             user = data_sims.index[i]
-            print(user)
             event = data_sims.columns[j]
             if df.iloc[i][j] == 1:
                 data_sims.iloc[i][j] = 0
@@ -82,11 +81,11 @@ def post(request):
         'userId', '1', '2', '3', '4', '5', '6'
     ])
     data_recommend.iloc[0:, 0] = data_sims.iloc[:, 0]
-    print(data_sims)
     # Instead of top event scores, we want to see eventId numbers.
     for i in range(0, len(data_sims.index)):
         data_recommend.iloc[i, 1:] = data_sims.iloc[i, :].order(
             ascending=False).iloc[1:7, ].index.transpose()
-    # Return all recommendations in response to HTTP post.
+    # Return all recommendations in response to HTTP post
+    print("\n")
     print(data_recommend.to_string)
-    return data_recommend.to_string
+    return HttpResponse(data_recommend.to_string)
