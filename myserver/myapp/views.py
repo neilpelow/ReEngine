@@ -34,12 +34,10 @@ def post(request):
     # --- Start Item Based Recommendations --- #
     # Drop any column named "userId"
     data_file = df.drop('userId', 1)
-    print("This is the data_file DataFrame")
-    print(data_file)
     # Create a placeholder dataframe listing item vs. item
     data_ibs = pd.DataFrame(index=data_file.columns,
                             columns=data_file.columns)
-    print(data_ibs)
+
     data_ibs.reset_index()
     # Lets fill in those empty spaces with cosine similarities
     # Loop through the columns
@@ -54,18 +52,15 @@ def post(request):
     for i in range(0, len(data_ibs.columns)):
         data_neighbours.iloc[i, :10] = data_ibs.iloc[
             0:, i].order(ascending=False)[:10].index
-
     # --- End Item Based Recommendations --- #
-    # --- Start User Based Recommendations --- #
-    # Helper function to get similarity scores
 
+    # --- Start User Based Recommendations --- #
     def getScore(history, similarities):
         return sum(history * similarities) / sum(similarities)
 
     # Create a place holder matrix for similarities, and fill in the user name column
     data_sims = pd.DataFrame(index=df.index, columns=df.columns)
     data_sims.iloc[:, :1] = df.iloc[:, :1]
-    print(data_sims)
     print(len(data_sims.index))
     # Loop through all rows, skip the user column, and fill with similarity scores
     for i in range(1, len(data_sims.index)):
@@ -86,12 +81,12 @@ def post(request):
         'userId', '1', '2', '3', '4', '5', '6'
     ])
     data_recommend.iloc[0:, 0] = data_sims.iloc[:, 0]
-    # Instead of top event scores, we want to see eventId numbers.
+    # Instead of top event scores, we want to see eventId numbers so they can be passed back to the app.
     for i in range(0, len(data_sims.index)):
         data_recommend.iloc[i, 1:] = data_sims.iloc[i, :].order(
             ascending=False).iloc[1:7, ].index.transpose()
-    # Return all recommendations in response to HTTP post
-    print("\n")
-    print(data_recommend.to_string)
+    # Return all recommendations in response to HTTP post to be parsed on the client side.
+    print("\n" + data_recommend.to_string)
     json_recommend = data_recommend.to_json(orient='index')
-    return JsonResponse(json_recommend, content_type='json', safe=False)
+    if json_recommend is not None:
+        return JsonResponse(json_recommend, content_type='json', safe=False)
