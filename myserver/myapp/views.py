@@ -94,5 +94,4 @@ def post(request):
     print("\n")
     print(data_recommend.to_string)
     json_recommend = data_recommend.to_json(orient='index')
-    if json_recommend is not None:
-        return JsonResponse(json_recommend, content_type='json', safe=False)
+    return JsonResponse(json_recommend, content_type='json', safe=False)
